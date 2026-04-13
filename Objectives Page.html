@@ -5,16 +5,24 @@
     <title>ProActive Sports</title>
     <link rel="icon" type="image/x-icon" href="https://scontent-jnb2-1.xx.fbcdn.net/v/t39.30808-6/670381927_122101232756789078_6996963013773023967_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=x7jNfpNmm6gQ7kNvwFAViUn&_nc_oc=AdpOQ_lZ1QVgUDQtmjUCQPUk5zfmdXf2dd14sDoZXo2cx9L1eg4y7i8OZaD7mmWn5_s&_nc_zt=23&_nc_ht=scontent-jnb2-1.xx&_nc_gid=um4IES3dgopGRhGIHAfDJA&_nc_ss=7a389&oh=00_Af2naLydZjjhM4OcjpaCargSx-DxPrnAwUCfZ39m2tp5tA&oe=69E072EB">
     <nav>
-
+       <div class="nav-left">
         <div class="logo">
             <img src="https://scontent-jnb2-1.xx.fbcdn.net/v/t39.30808-6/670381927_122101232756789078_6996963013773023967_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=x7jNfpNmm6gQ7kNvwFAViUn&_nc_oc=AdpOQ_lZ1QVgUDQtmjUCQPUk5zfmdXf2dd14sDoZXo2cx9L1eg4y7i8OZaD7mmWn5_s&_nc_zt=23&_nc_ht=scontent-jnb2-1.xx&_nc_gid=um4IES3dgopGRhGIHAfDJA&_nc_ss=7a389&oh=00_Af2naLydZjjhM4OcjpaCargSx-DxPrnAwUCfZ39m2tp5tA&oe=69E072EB" />
         </div>
+         </div>
         <div class="menu">
 
             <a href="Home.html">Home</a></li>
             <a href="Objectives Page.html">Objectives</a></li>
             <a href="About.html">About</a></li>
         </div>
+        
+            
+
+            
+         <button id="signin-btn" onclick="showLoginModal()">Sign In</button>
+            
+        
     </nav>
 </head>
 <header>
@@ -47,9 +55,17 @@
         background: black;
         color: white;
         padding: 10px;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         text-align: center;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
+    }
+    .nav-left {
+        display: flex;
+        align-items: center;
     }
 
     nav a {

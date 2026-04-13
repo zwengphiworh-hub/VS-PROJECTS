@@ -15,7 +15,7 @@
     }
 
     
-    window.onclick = function(event) {
+    window.alert = function(event) { 
         const loginModal = document.getElementById('login-modal');
         const signupModal = document.getElementById('signup-modal');
         if (event.target == loginModal) {
