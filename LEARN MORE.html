@@ -1,128 +1,293 @@
 <!DOCTYPE html>
+
 <head>
-    
+
     <title>ProActive Sports</title>
-    <link rel="icon" type="image/x-icon" href="https://scontent-jnb2-1.xx.fbcdn.net/v/t39.30808-6/670381927_122101232756789078_6996963013773023967_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=x7jNfpNmm6gQ7kNvwFAViUn&_nc_oc=AdpOQ_lZ1QVgUDQtmjUCQPUk5zfmdXf2dd14sDoZXo2cx9L1eg4y7i8OZaD7mmWn5_s&_nc_zt=23&_nc_ht=scontent-jnb2-1.xx&_nc_gid=um4IES3dgopGRhGIHAfDJA&_nc_ss=7a389&oh=00_Af2naLydZjjhM4OcjpaCargSx-DxPrnAwUCfZ39m2tp5tA&oe=69E072EB">
+    <link rel="icon" type="image/x-icon"
+        href="https://scontent-jnb2-1.xx.fbcdn.net/v/t39.30808-6/670381927_122101232756789078_6996963013773023967_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=x7jNfpNmm6gQ7kNvwFAViUn&_nc_oc=AdpOQ_lZ1QVgUDQtmjUCQPUk5zfmdXf2dd14sDoZXo2cx9L1eg4y7i8OZaD7mmWn5_s&_nc_zt=23&_nc_ht=scontent-jnb2-1.xx&_nc_gid=um4IES3dgopGRhGIHAfDJA&_nc_ss=7a389&oh=00_Af2naLydZjjhM4OcjpaCargSx-DxPrnAwUCfZ39m2tp5tA&oe=69E072EB">
     <nav>
-        
-        <div class="logo">
-            <img src="https://scontent-jnb2-1.xx.fbcdn.net/v/t39.30808-6/670381927_122101232756789078_6996963013773023967_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=x7jNfpNmm6gQ7kNvwFAViUn&_nc_oc=AdpOQ_lZ1QVgUDQtmjUCQPUk5zfmdXf2dd14sDoZXo2cx9L1eg4y7i8OZaD7mmWn5_s&_nc_zt=23&_nc_ht=scontent-jnb2-1.xx&_nc_gid=um4IES3dgopGRhGIHAfDJA&_nc_ss=7a389&oh=00_Af2naLydZjjhM4OcjpaCargSx-DxPrnAwUCfZ39m2tp5tA&oe=69E072EB"/>
-        </div>
-        <div class="menu">
-        
-            <a href="Objectives Page.html">Objectives</a></li>
-            <a href="Home.html">Home</a></li>
-            <a href="ABOUT.html">About</a></li>
+
+        <div class="nav-left">
+            <div class="logo">
+                <img
+                    src="https://scontent-jnb2-1.xx.fbcdn.net/v/t39.30808-6/670381927_122101232756789078_6996963013773023967_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=x7jNfpNmm6gQ7kNvwFAViUn&_nc_oc=AdpOQ_lZ1QVgUDQtmjUCQPUk5zfmdXf2dd14sDoZXo2cx9L1eg4y7i8OZaD7mmWn5_s&_nc_zt=23&_nc_ht=scontent-jnb2-1.xx&_nc_gid=um4IES3dgopGRhGIHAfDJA&_nc_ss=7a389&oh=00_Af2naLydZjjhM4OcjpaCargSx-DxPrnAwUCfZ39m2tp5tA&oe=69E072EB" />
             </div>
+        </div>    
+            <div class="menu">
+
+                <a href="Objectives Page.html">Objectives</a>
+                <a href="Home.html">Home</a>
+                <a href="ABOUT.html">About</a>
+            </div>
+        
+        <button id="signin-btn" onclick="showLoginModal()">Sign In</button>
     </nav>
 </head>
- <header>
-        <h1>ProActive Rugby</h1>
-        <p>Empowering Athletes, Elevating Sports</p>
-        
-        
+<header>
+    <h1>ProActive Rugby</h1>
+    <p>Empowering Athletes, Elevating Sports</p>
+
+
 </header>
 <style>
-
-    nav img{
-        height:60px;
+    nav img {
+        height: 60px;
     }
 
-    body{
-        font-family:Georgia, 'Times New Roman', Times, serif;
+    body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
         background: whitesmoke;
-        color:black;
+        color: black;
     }
-    header{
+
+    header {
         text-align: center;
         color: white;
-        padding:20px;
+        padding: 20px;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
-        background-image: url('https://i.pinimg.com/1200x/ea/0b/c7/ea0bc7e612df365f5b9c4b7a319c6145.jpg')     ;
+        background-image: url('https://i.pinimg.com/1200x/ea/0b/c7/ea0bc7e612df365f5b9c4b7a319c6145.jpg');
     }
-    nav{
-        background:black;
-        color:white;
-        padding:10px;
-        text-align:center;
+
+    nav {
+        background: black;
+        color: white;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
     }
-    nav a{
-        color:white;
-        text-decoration:none;
-        margin: 0 15px;
-        font-size:18px;
+
+    .nav-left {
+        display: flex;
+        align-items: center;
     }
-    nav a:hover{
-        color:black;
-        background:white;
-        padding:5px;
+
+    #signin-btn {
+        background: white;
+        color: black;
+        border: none;
+        padding: 10px 15px;
         border-radius: 5px;
-    
-        
+        cursor: pointer;
+        font-size: 16px;
     }
+
+    #signin-btn:hover {
+        background: #f0f0f0;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 18px;
+    }
+
+    nav a:hover {
+        color: black;
+        background: white;
+        padding: 5px;
+        border-radius: 5px;
+
+
+    }
+
+
+    .card {
+        background: white;
+        padding: 25px;
+        margin: 20px auto;
+        width: 80%;
+        border-radius: 10px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        display: block;
+    }
+
+    footer {
+        background: black;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .card:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    input {
+        display: block;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 50px;
+    }
+
+    button {
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50px;
+    }
+
     
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+    }
 
-.card{
-   background:white;
-padding:25px;
-margin:20px auto;
-width:80%;
-border-radius:10px;
-box-shadow:0 3px 8px rgba(0,0,0,0.2); 
-}
-.card img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    display: block;
-}
-footer{
-background:black;
-color:white;
-text-align:center;
-padding:20px;
-border-bottom-left-radius: 10px;
-border-bottom-right-radius: 10px;
-}
-.card:hover{
-transform:translateY(-8px) scale(1.03);
-box-shadow:0 10px 20px rgba(0,0,0,0.3);
-}
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 400px;
+        border-radius: 10px;
+    }
 
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+    }
 </style>
+
 <body>
     <div class="container">
-  <h1>Welcome to ProActive Rugby</h1>
-  <p>At ProActive Rugby, we are dedicated to empowering athletes and elevating the world of rugby. Our mission is to provide comprehensive support and services to athletes, teams, and organizations, helping them achieve their goals and reach new heights in their sporting careers.</p>
-     <p>Whether you're an aspiring athlete looking for representation, a team in need of event management, or an organization seeking sports marketing expertise, ProActive Rugby is here to help. Our team of experienced professionals is committed to delivering personalized solutions that meet the unique needs of each client.</p>
-     <p>Explore our website to learn more about our services, meet our team, and discover how we can help you succeed in the world of rugby. Join us on this exciting journey as we work together to create a brighter future for athletes and the rugby industry.</p>
+        <h1>Welcome to ProActive Rugby</h1>
+        <p>At ProActive Rugby, we are dedicated to empowering athletes and elevating the world of rugby. Our mission is
+            to provide comprehensive support and services to athletes, teams, and organizations, helping them achieve
+            their goals and reach new heights in their sporting careers.</p>
+        <p>Whether you're an aspiring athlete looking for representation, a team in need of event management, or an
+            organization seeking sports marketing expertise, ProActive Rugby is here to help. Our team of experienced
+            professionals is committed to delivering personalized solutions that meet the unique needs of each client.
+        </p>
+        <p>Explore our website to learn more about our services, meet our team, and discover how we can help you succeed
+            in the world of rugby. Join us on this exciting journey as we work together to create a brighter future for
+            athletes and the rugby industry.</p>
+    </div>
+
+    <div class="card">
+        <img src="https://i.pinimg.com/736x/40/74/fc/4074fc6d3d2dbf8fd6074e28119bc59e.jpg" alt="Rugby Image">
+        <h2>Our Coaching Staff</h2>
+        <p>Our coaching staff is composed of experienced professionals who are passionate about rugby and dedicated to
+            helping our athletes reach their full potential. With a wealth of knowledge and expertise, our coaches
+            provide personalized training programs, strategic guidance, and unwavering support to help our athletes
+            excel on and off the field.</p>
+    </div>
+    <div class="card">
+        <img src="https://i.pinimg.com/1200x/62/4c/b2/624cb26a86561686a0d386b931436326.jpg" alt="Rugby Image">
+        <h2>Our Training Facilities</h2>
+        <p>Our state-of-the-art training facilities are designed to provide our athletes with the best possible
+            environment for growth and development. Equipped with modern amenities and cutting-edge technology, our
+            facilities offer a comprehensive range of resources to support our athletes' training needs, including
+            strength and conditioning equipment, recovery areas, and dedicated spaces for skill development.</p>
+    </div>
+    <h1>Rugby Rules</h1>
+    <ul>
+        <li>Rugby is played with two teams of 15 players each.</li>
+        <li>The objective is to score points by carrying, passing or kicking the ball to the opponent's end zone.</li>
+        <li>Players can only pass the ball backward, not forward.</li>
+        <li>Tackling is allowed, but players must use their arms and not their legs.</li>
+        <li>The game is divided into two halves, each lasting 40 minutes.</li>
+
+    </ul>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6zvoPEP1LC8"
+        title="Rugby 101: All the basics of Rugby - All you need to know to watch your first game" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h2>Upcoming Football Matches</h2>
+    <div id="matches"></div>
+
+    
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>Sign In</h2>
+            <input type="text" id="loginUsername" placeholder="Username">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p id="login-message"></p>
+            <p>Don't have an account? <a href="#" onclick="showSignupModal()">Sign up</a></p>
         </div>
+    </div>
 
-<div class="card">
-    <img src="https://i.pinimg.com/736x/40/74/fc/4074fc6d3d2dbf8fd6074e28119bc59e.jpg" alt="Rugby Image">
-    <h2>Our Coaching Staff</h2>
-    <p>Our coaching staff is composed of experienced professionals who are passionate about rugby and dedicated to helping our athletes reach their full potential. With a wealth of knowledge and expertise, our coaches provide personalized training programs, strategic guidance, and unwavering support to help our athletes excel on and off the field.</p>
-</div>
-<div class="card">
-    <img src="https://i.pinimg.com/1200x/62/4c/b2/624cb26a86561686a0d386b931436326.jpg" alt="Rugby Image">
-    <h2>Our Training Facilities</h2>
-    <p>Our state-of-the-art training facilities are designed to provide our athletes with the best possible environment for growth and development. Equipped with modern amenities and cutting-edge technology, our facilities offer a comprehensive range of resources to support our athletes' training needs, including strength and conditioning equipment, recovery areas, and dedicated spaces for skill development.</p>
-</div>
-<h1>Rugby Rules</h1>
-<ul>
-    <li>Rugby is played with two teams of 15 players each.</li>
-    <li>The objective is to score points by carrying, passing or kicking the ball to the opponent's end zone.</li>
-    <li>Players can only pass the ball backward, not forward.</li>
-    <li>Tackling is allowed, but players must use their arms and not their legs.</li>
-    <li>The game is divided into two halves, each lasting 40 minutes.</li>
-
-</ul>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6zvoPEP1LC8" title="Rugby 101: All the basics of Rugby - All you need to know to watch your first game" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSignupModal()">&times;</span>
+            <h2>Sign Up</h2>
+            <input type="text" id="signupUsername" placeholder="Username">
+            <input type="password" id="signupPassword" placeholder="Password">
+            <button onclick="signup()">Sign Up</button>
+            <p id="signup-message"></p>
+            <p>Already have an account? <a href="#" onclick="showLoginModal()">Login</a></p>
+        </div>
+    </div>
 
 </body>
+
+<script>
+    
+    function showLoginModal() {
+        document.getElementById('login-modal').style.display = 'block';
+    }
+
+    function closeLoginModal() {
+        document.getElementById('login-modal').style.display = 'none';
+    }
+
+    function showSignupModal() {
+        document.getElementById('signup-modal').style.display = 'block';
+    }
+
+    function closeSignupModal() {
+        document.getElementById('signup-modal').style.display = 'none';
+    }
+
+    
+    window.onclick = function(event) {
+        const loginModal = document.getElementById('login-modal');
+        const signupModal = document.getElementById('signup-modal');
+        if (event.target == loginModal) {
+            loginModal.style.display = 'none';
+        }
+        if (event.target == signupModal) {
+            signupModal.style.display = 'none';
+        }
+    }
+
+    
+
+    
+</script>
+
+
 <footer>
     <p style="text-align:center;font-size:14px;">&copy; 2024 ProActive Rugby. All rights reserved.</p>
 </footer>
